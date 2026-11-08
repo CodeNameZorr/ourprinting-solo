@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Printing Solo | Cetak Stiker Custom</title>
+  <meta name="description" content="Our Printing Solo: cetak stiker custom berkualitas. Bahan awet, warna tajam, tahan cuaca. Order dan konsultasi desain via Instagram & WhatsApp." />
+  <meta name="theme-color" content="#1d4474" />
+  <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
+
+  <meta property="og:title" content="Our Printing Solo | Cetak Stiker Custom" />
+  <meta property="og:description" content="Your Ideas, Our Print! Cetak stiker custom berkualitas di Solo." />
+  <meta property="og:image" content="assets/logo/logo-stack.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a href="#beranda" class="nav__logo" aria-label="Our Printing Solo - beranda">
+        <img src="assets/logo/logo-horizontal.png" alt="Our Printing Solo" />
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Menu utama">
+        <a href="#katalog">Katalog</a>
+        <a href="#custom">Stiker Custom</a>
+        <a href="#alur">Cara Order</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#kontak">Kontak</a>
+        <a class="btn btn--wa btn--sm nav__cta" data-wa="Halo Our Printing Solo, saya mau tanya-tanya soal stiker." href="#kontak">
+          <svg class="ic"><use href="#i-wa"/></svg> Order
+        </a>
+      </nav>
+      <button class="nav__burger" id="burger" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="beranda">
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <span class="pill"><span class="dot"></span> Cetak stiker di Solo</span>
+          <h1>Your Ideas,<br /><span class="hl">Our Print!</span></h1>
+          <p class="lead">Cetak stiker custom berkualitas. Bahan awet, warna tajam, dan tahan cuaca. Punya ide desain? Kami bantu sampai jadi stiker.</p>
+          <div class="hero__cta">
+            <a class="btn btn--wa" data-wa="Halo Our Printing Solo, saya mau order / konsultasi desain stiker." href="#kontak">
+              <svg class="ic"><use href="#i-wa"/></svg> Order via WhatsApp
+            </a>
+            <a class="btn btn--ghost" href="#katalog">Lihat Katalog</a>
+          </div>
+          <ul class="chips">
+            <li>✦ Bahan Awet</li>
+            <li>✦ Warna Tajam</li>
+            <li>✦ Tahan Cuaca</li>
+          </ul>
+        </div>
+
+        <div class="hero__art" aria-hidden="true">
+          <figure class="stk stk--1"><img src="assets/img/spiderman-hologram.jpg" alt="" /></figure>
+          <figure class="stk stk--2"><img src="assets/img/hindia-vinyl.jpg" alt="" /></figure>
+          <figure class="stk stk--3"><img src="assets/img/oasis-hologram.jpg" alt="" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KEUNGGULAN ============ -->
+    <section class="perks">
+      <div class="wrap perks__grid">
+        <div class="perk reveal"><span class="perk__ic">🛡️</span><div><h3>Bahan Awet</h3><p>Stiker tidak mudah rusak dan tidak gampang luntur.</p></div></div>
+        <div class="perk reveal"><span class="perk__ic">🎨</span><div><h3>Warna Tajam</h3><p>Hasil cetak cerah dan detail desain tetap jelas.</p></div></div>
+        <div class="perk reveal"><span class="perk__ic">☔</span><div><h3>Tahan Cuaca</h3><p>Aman ditempel di botol, helm, laptop, dan motor.</p></div></div>
+        <div class="perk reveal"><span class="perk__ic">✏️</span><div><h3>Bisa Dibuatkan Desain</h3><p>Belum punya desain? Ceritakan idemu, kami bantu buat.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ============ KATALOG ============ -->
+    <section class="sec" id="katalog">
+      <div class="wrap">
+        <header class="sec__head reveal">
+          <span class="eyebrow">Katalog</span>
+          <h2>Pilih pack stiker favoritmu</h2>
+          <p>Setiap pack tersedia dalam dua pilihan bahan: <b>Vinyl</b> dan <b>Hologram</b>. Klik tombol pilihan untuk melihat tampilannya.</p>
+        </header>
+        <div class="grid" id="productGrid"><!-- diisi otomatis dari config.js --></div>
+        <p class="note reveal">Harga dan ketersediaan bisa berubah, hubungi kami untuk konfirmasi sebelum order.</p>
+      </div>
+    </section>
+
+    <!-- ============ CUSTOM ============ -->
+    <section class="sec sec--tint" id="custom">
+      <div class="wrap">
+        <header class="sec__head reveal">
+          <span class="eyebrow">Stiker Custom</span>
+          <h2>Punya ide sendiri? Jadikan stiker.</h2>
+          <p>Cetak desain buatanmu atau minta kami yang membuatkan desainnya. Cocok untuk brand, komunitas, kemasan produk UMKM, acara, hingga koleksi pribadi.</p>
+        </header>
+        <div class="duo">
+          <article class="card-big reveal">
+            <span class="card-big__tag">Opsi 1</span>
+            <h3>Kirim desain sendiri</h3>
+            <p>Sudah punya file desain? Kirim lewat WhatsApp atau DM Instagram, kami cek dulu kecocokannya lalu langsung proses cetak.</p>
+            <a class="btn btn--primary" data-wa="Halo Our Printing Solo, saya sudah punya desain stiker dan mau cetak. Bagaimana alurnya?" href="#kontak">Kirim desain</a>
+          </article>
+          <article class="card-big card-big--dark reveal">
+            <span class="card-big__tag">Opsi 2</span>
+            <h3>Minta dibuatkan desain</h3>
+            <p>Belum punya desain? Ceritakan ide, tema, atau referensimu. Kami bantu konsultasi dan buatkan desain stikernya.</p>
+            <a class="btn btn--light" data-wa="Halo Our Printing Solo, saya mau konsultasi dan minta dibuatkan desain stiker. Ide saya: " href="#kontak">Konsultasi desain</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ALUR ============ -->
+    <section class="sec" id="alur">
+      <div class="wrap">
+        <header class="sec__head reveal">
+          <span class="eyebrow">Cara Order</span>
+          <h2>Order mudah, 5 langkah</h2>
+          <p>Semua komunikasi lewat WhatsApp dan Instagram, tidak perlu ribet.</p>
+        </header>
+        <ol class="steps">
+          <li class="step reveal"><span class="step__no">1</span><h3>Hubungi kami</h3><p>Chat lewat WhatsApp atau DM Instagram. Sebutkan pack yang dipilih atau ide stikermu.</p></li>
+          <li class="step reveal"><span class="step__no">2</span><h3>Desain</h3><p>Kirim desain sendiri, atau konsultasi dan minta kami buatkan.</p></li>
+          <li class="step reveal"><span class="step__no">3</span><h3>Konfirmasi</h3><p>Kami kirim detail pesanan dan total harga. Setujui, lalu lakukan pembayaran.</p></li>
+          <li class="step reveal"><span class="step__no">4</span><h3>Proses cetak</h3><p>Pesananmu dicetak dengan bahan yang dipilih, lalu dicek kualitasnya.</p></li>
+          <li class="step reveal"><span class="step__no">5</span><h3>Pesanan siap</h3><p>Stiker siap diambil atau dikirim. Tinggal tempel!</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ GALERI ============ -->
+    <section class="sec sec--tint" id="galeri">
+      <div class="wrap">
+        <header class="sec__head reveal">
+          <span class="eyebrow">Galeri</span>
+          <h2>Hasil tempel stiker kami</h2>
+          <p>Potongan rapi, mudah dikelupas, dan enak dilihat di barang sehari-hari.</p>
+        </header>
+        <div class="gallery" id="gallery"><!-- diisi otomatis dari config.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ KONTAK ============ -->
+    <section class="sec" id="kontak">
+      <div class="wrap">
+        <div class="contact reveal">
+          <div class="contact__text">
+            <span class="eyebrow eyebrow--light">Kontak</span>
+            <h2>Yuk, ngobrol soal stikermu!</h2>
+            <p>Untuk order cetak dan konsultasi desain stiker, hubungi kami lewat WhatsApp atau Instagram.</p>
+          </div>
+          <div class="contact__links">
+            <a class="ct ct--wa" id="ctWa" href="#" target="_blank" rel="noopener">
+              <svg class="ic ic--lg"><use href="#i-wa"/></svg>
+              <span><small>WhatsApp</small><b id="waText">0XXX-XXXX-XXXX</b></span>
+            </a>
+            <a class="ct ct--ig" id="ctIg" href="#" target="_blank" rel="noopener">
+              <svg class="ic ic--lg"><use href="#i-ig"/></svg>
+              <span><small>Instagram</small><b id="igText">@ourprinting.solo</b></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div class="foot__brand">
+        <span class="foot__logo"><img src="assets/logo/logo-horizontal.png" alt="Our Printing Solo" /></span>
+        <p>Your Ideas, Our Print! Cetak stiker custom berkualitas di Solo.</p>
+      </div>
+      <div class="foot__links">
+        <a href="#katalog">Katalog</a>
+        <a href="#custom">Stiker Custom</a>
+        <a href="#alur">Cara Order</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+    </div>
+    <div class="wrap foot__copy">© <span id="year">2026</span> Our Printing Solo. Seluruh hak cipta dilindungi.</div>
+  </footer>
+
+  <!-- Tombol WhatsApp melayang -->
+  <a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <svg class="ic ic--lg"><use href="#i-wa"/></svg><span>Chat</span>
+  </a>
+
+  <!-- Ikon -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6A12 12 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.5ZM12 22a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 22 12c0 5.5-4.5 10-10 10Zm5.5-7.5c-.3-.1-1.8-.9-2.1-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1a8.200 8.200 0 0 1-4.100-3.600c-.3-.5.3-.5.9-1.600.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6a1.200 1.200 0 0 0-.9.4 3.700 3.700 0 0 0-1.100 2.700c0 1.600 1.100 3.200 1.300 3.400s2.300 3.500 5.600 4.900c2 .9 2.800.9 3.800.8.600-.1 1.800-.7 2-1.400s.3-1.300.2-1.400-.3-.2-.6-.3Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.200A3.200 3.200 0 1 1 12 8.800a3.200 3.200 0 0 1 0 6.400ZM17.300 5.500a1.200 1.200 0 1 0 0 2.400 1.200 1.200 0 0 0 0-2.400Z"/><path fill="currentColor" d="M16.500 2h-9A5.500 5.500 0 0 0 2 7.500v9A5.500 5.500 0 0 0 7.500 22h9a5.500 5.500 0 0 0 5.500-5.500v-9A5.500 5.500 0 0 0 16.500 2Zm3.700 14.500a3.700 3.700 0 0 1-3.700 3.700h-9a3.700 3.700 0 0 1-3.700-3.700v-9a3.700 3.700 0 0 1 3.700-3.700h9a3.700 3.700 0 0 1 3.700 3.700Z"/></symbol>
+  </svg>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
