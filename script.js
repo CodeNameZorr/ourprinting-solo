@@ -13,10 +13,10 @@
   /* ---------- Katalog ---------- */
   const grid = document.getElementById("productGrid");
 
-  function hargaHTML(v) {
+  function hargaHTML(v, p) {
     return v.harga == null
       ? `<span class="price"><small>Tanya harga</small></span>`
-      : `<span class="price">${rupiah(v.harga)}<small style="display:block">per lembar</small></span>`;
+      : `<span class="price">${rupiah(v.harga)}<small style="display:block">${p.satuan || "per pack"}</small></span>`;
   }
 
   PRODUK.forEach((p) => {
@@ -26,6 +26,8 @@
       <div class="card__img">
         <img src="${p.vinyl.foto}" alt="${p.nama} bahan vinyl" loading="lazy" />
         <span class="badge">Vinyl</span>
+        ${p.pcs ? `<span class="badge badge--pcs">${p.pcs} pcs</span>` : ""}
+        ${p.ilustrasi ? `<span class="badge badge--note">Foto ilustrasi</span>` : ""}
       </div>
       <div class="card__body">
         <span class="card__tema">${p.tema}</span>
@@ -35,14 +37,14 @@
           <button type="button" data-v="vinyl" aria-pressed="true">Vinyl</button>
           <button type="button" data-v="hologram" aria-pressed="false">Hologram</button>
         </div>
-        <div class="price-wrap">${hargaHTML(p.vinyl)}</div>
+        <div class="price-wrap">${hargaHTML(p.vinyl, p)}</div>
         <a class="btn btn--wa" target="_blank" rel="noopener" href="#">
           <svg class="ic"><use href="#i-wa"/></svg> Pesan
         </a>
       </div>`;
 
     const img = card.querySelector(".card__img img");
-    const badge = card.querySelector(".badge");
+    const badge = card.querySelector(".badge");  // badge pertama = bahan
     const priceWrap = card.querySelector(".price-wrap");
     const order = card.querySelector(".btn");
     const buttons = card.querySelectorAll(".toggle button");
@@ -55,7 +57,7 @@
       img.alt = `${p.nama} bahan ${label.toLowerCase()}`;
       badge.textContent = label;
       badge.classList.toggle("badge--holo", varian === "hologram");
-      priceWrap.innerHTML = hargaHTML(v);
+      priceWrap.innerHTML = hargaHTML(v, p);
       order.href = waLink(`Halo Our Printing Solo, saya mau pesan ${p.nama} (${label}). Apakah masih tersedia?`);
       buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === varian)));
     }

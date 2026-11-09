@@ -15,55 +15,76 @@ const TOKO = {
   // ⚠️ GANTI DENGAN NOMOR WA KAMU
   // Format: awalan 62 (tanpa 0, tanpa +, tanpa spasi/strip).
   // Contoh: nomor 0812-3456-7890  ->  "6281234567890"
-  wa: "6289501426127",
+  wa: "6288221516004",
 
   // Tampilan nomor di website (bebas, hanya tulisan)
-  waTampil: "0895-0142-6127",
+  waTampil: "0882-2151-6004",
 };
 
 /* ----------------------------------------------------------
    DAFTAR PRODUK
-   - harga dalam Rupiah, TANPA titik. Contoh: 15000
-   - Contoh harga di bawah hanya CONTOH, silakan ganti.
-   - Kalau belum mau menampilkan harga, isi harga dengan null
-     (nanti tampil "Tanya harga").
+   - harga dalam Rupiah, TANPA titik. Contoh: 12000
+   - harga: null  -> tampil "Tanya harga"
+   - pcs: jumlah stiker per pack (isi null kalau tidak mau ditampilkan)
+   - satuan: tulisan di bawah harga, misalnya "per pack" atau "per lembar"
+   - ilustrasi: true -> muncul keterangan "Foto ilustrasi" di kartu
    - foto: nama file di folder assets/img/
    ---------------------------------------------------------- */
 const PRODUK = [
   {
     nama: "Pack Spider-Man",
-    tema: "Karakter & Komik",
-    deskripsi: "Kumpulan stiker Spider-Man dan Marvel dalam satu lembar.",
-    vinyl:    { harga: 10000, foto: "assets/img/spiderman-vinyl.jpg" },
+    tema: "Karakter & Komik · Reguler",
+    pcs: 26,
+    satuan: "per pack",
+    deskripsi: "Kumpulan stiker Spider-Man dan Marvel dalam satu pack.",
+    vinyl:    { harga: 12000, foto: "assets/img/spiderman-vinyl.jpg" },
     hologram: { harga: 15000, foto: "assets/img/spiderman-hologram.jpg" },
   },
   {
     nama: "Pack Oasis",
-    tema: "Musik & Band",
+    tema: "Musik & Band · Reguler",
+    pcs: 22,
+    satuan: "per pack",
     deskripsi: "Stiker bertema Oasis dan Noel Gallagher, cocok untuk laptop dan botol minum.",
-    vinyl:    { harga: 10000, foto: "assets/img/oasis-vinyl.jpg" },
+    vinyl:    { harga: 12000, foto: "assets/img/oasis-vinyl.jpg" },
     hologram: { harga: 15000, foto: "assets/img/oasis-hologram.jpg" },
   },
   {
     nama: "Pack Hindia",
-    tema: "Musik & Band",
+    tema: "Musik & Band · Reguler",
+    pcs: 15,
+    satuan: "per pack",
     deskripsi: "Koleksi stiker bertema Hindia.",
-    vinyl:    { harga: 10000, foto: "assets/img/hindia-vinyl.jpg" },
+    vinyl:    { harga: 12000, foto: "assets/img/hindia-vinyl.jpg" },
     hologram: { harga: 15000, foto: "assets/img/hindia-hologram.jpg" },
   },
   {
-    nama: "Pack Rock Band",
-    tema: "Musik & Band",
-    deskripsi: "Logo band rock dan metal favorit dalam satu lembar.",
-    vinyl:    { harga: 10000, foto: "assets/img/rock-vinyl.jpg" },
+    nama: "Pack Band",
+    tema: "Musik & Band · Reguler",
+    pcs: 29,
+    satuan: "per pack",
+    deskripsi: "Logo band rock dan metal favorit dalam satu pack.",
+    vinyl:    { harga: 12000, foto: "assets/img/rock-vinyl.jpg" },
     hologram: { harga: 15000, foto: "assets/img/rock-hologram.jpg" },
   },
   {
     nama: "Pack Islami",
-    tema: "Kaligrafi & Quotes",
+    tema: "Kaligrafi & Quotes · Reguler",
+    pcs: 16,
+    satuan: "per pack",
     deskripsi: "Stiker kata-kata islami seperti Alhamdulillah dan Man Jadda Wa Jada.",
-    vinyl:    { harga: 10000, foto: "assets/img/islami-vinyl.jpg" },
+    vinyl:    { harga: 12000, foto: "assets/img/islami-vinyl.jpg" },
     hologram: { harga: 15000, foto: "assets/img/islami-hologram.jpg" },
+  },
+  {
+    nama: "Stiker Mini",
+    tema: "Ukuran Lebih Kecil",
+    pcs: null,
+    satuan: "per pack",
+    ilustrasi: true,
+    deskripsi: "Ukuran lebih kecil, pas untuk ditempel di case HP. Tanya tema yang tersedia lewat WhatsApp.",
+    vinyl:    { harga: 5000, foto: "assets/img/mini-vinyl.jpg" },
+    hologram: { harga: 8000, foto: "assets/img/mini-hologram.jpg" },
   },
 ];
 
