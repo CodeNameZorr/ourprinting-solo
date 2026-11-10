@@ -11,6 +11,7 @@ const TOKO = {
 
   // Username Instagram (tanpa @)
   ig: "ourprinting.solo",
+   tiktok: "ourprinting.solo",
 
   // ⚠️ GANTI DENGAN NOMOR WA KAMU
   // Format: awalan 62 (tanpa 0, tanpa +, tanpa spasi/strip).
