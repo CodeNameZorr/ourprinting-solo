@@ -80,7 +80,7 @@
     gal.appendChild(f);
   });
 
-  /* ---------- Link WhatsApp & Instagram ---------- */
+  /* ---------- Link WhatsApp, Instagram & TikTok ---------- */
   document.querySelectorAll("[data-wa]").forEach((a) => {
     a.href = waLink(a.dataset.wa);
     a.target = "_blank";
@@ -94,6 +94,18 @@
   const ctIg = document.getElementById("ctIg");
   ctIg.href = igLink;
   document.getElementById("igText").textContent = "@" + TOKO.ig;
+
+  // TikTok: kartu disembunyikan kalau tiktok di config.js kosong / tidak ada
+  const ctTt = document.getElementById("ctTt");
+  if (ctTt) {
+    if (TOKO.tiktok) {
+      ctTt.href = `https://www.tiktok.com/@${TOKO.tiktok}`;
+      document.getElementById("ttText").textContent = "@" + TOKO.tiktok;
+    } else {
+      ctTt.hidden = true;
+    }
+  }
+
   document.getElementById("year").textContent = new Date().getFullYear();
 
   /* ---------- Menu mobile ---------- */
