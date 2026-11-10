@@ -58,7 +58,12 @@
       badge.textContent = label;
       badge.classList.toggle("badge--holo", varian === "hologram");
       priceWrap.innerHTML = hargaHTML(v, p);
-      order.href = waLink(`Halo Our Printing Solo, saya mau pesan ${p.nama} (${label}). Apakah masih tersedia?`);
+      // Link foto produk ikut dikirim di chat (WhatsApp tidak bisa melampirkan gambar lewat link, jadi dikirim sebagai link foto)
+      const fotoUrl = location.protocol.startsWith("http") ? new URL(v.foto, location.href).href : "";
+      order.href = waLink(
+        `Halo Our Printing Solo, saya mau pesan ${p.nama} (${label}). Apakah masih tersedia?` +
+        (fotoUrl ? `\n\nFoto produk:\n${fotoUrl}` : "")
+      );
       buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === varian)));
     }
     buttons.forEach((b) => b.addEventListener("click", () => { varian = b.dataset.v; render(); }));
